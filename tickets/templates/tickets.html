@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+
+{% for ticket in tickets %}
+
+{{ticket.title}}
+{{ticket.category}}
+{{ticket.details}}
+{{ticket.date_created}}
+{{ticket.published_date}}
+{{ticket.upvotes}}
+
+{% endfor %}
+
+{% endblock %}    
