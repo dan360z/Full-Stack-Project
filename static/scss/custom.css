@@ -4,6 +4,9 @@ body {
   background-image: linear-gradient(to right, #16bffd, #cb3066);
   font-family: 'Roboto', sans-serif; }
 
+.opacity {
+  background-color: #00000099; }
+
 nav {
   background-color: #00000099; }
   nav .brand-logo {
@@ -38,8 +41,7 @@ nav .button-collapse i {
     font-family: 'Pacifico', cursive; }
 
 .intro {
-  padding: 15px 10px;
-  background-color: #00000099; }
+  padding: 15px 10px; }
   .intro p {
     color: #fff;
     font-size: 18px; }
@@ -47,11 +49,15 @@ nav .button-collapse i {
       font-family: 'Pacifico', cursive; }
 
 /*----------------Tickets-------------------------------------*/
+.tickets-wrapper {
+  padding-bottom: 10px;
+  margin-bottom: 60px; }
+
 .tickets-heading {
-  background-color: #00000099;
   color: #fff; }
-  .tickets-heading h4 {
-    margin: 4px 0; }
+  .tickets-heading h5 {
+    padding: 15px 0;
+    margin: 0; }
 
 .feature-bg {
   background-color: #1782f1; }
@@ -108,12 +114,16 @@ nav .button-collapse i {
 
 /*----------------Footer-------------------------------------*/
 footer {
-  font-weight: 500; }
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 17px;
+  color: #fff; }
   footer p {
     margin: 0px; }
   footer a {
     margin-left: 5px;
-    color: #000; }
+    color: #fff; }
     footer a:hover {
       color: #4b4b4b; }
 

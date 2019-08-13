@@ -8,6 +8,10 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+.opacity {
+    background-color:#00000099;
+}
+
 nav {
     background-color:#00000099;
     .brand-logo {
@@ -55,7 +59,6 @@ nav .button-collapse i {
 }
  .intro {
     padding: 15px 10px;
-    background-color:#00000099;
     p {
         color: #fff;
         font-size: 18px;
@@ -68,11 +71,16 @@ nav .button-collapse i {
 
 /*----------------Tickets-------------------------------------*/
 
+.tickets-wrapper {
+    padding-bottom: 10px;
+    margin-bottom: 60px;
+}
+
 .tickets-heading {
-    background-color:#00000099;
     color: #fff;
-    h4 {
-        margin: 4px 0;
+    h5 {
+        padding: 15px 0;
+        margin: 0;
     }
 }
 
@@ -147,13 +155,17 @@ nav .button-collapse i {
 /*----------------Footer-------------------------------------*/
 
 footer {
-    font-weight: 500;
+    position: absolute;
+    left: 0;
+    text-align: center;
+    font-size: 17px;
+    color: #fff;
     p {
         margin: 0px;
     }
     a {
         margin-left: 5px;
-        color: #000;
+        color: #fff;
         &:hover {
             color: rgb(75, 75, 75);
         }

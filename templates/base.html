@@ -27,14 +27,14 @@
         <!--Materialize Navigation Menu-->
         <nav>
             <div class="nav-wrapper">
-                <a href="#" class="brand-logo">Issue Tracker</a>
+                <a href="{% url 'index' %}" class="brand-logo">Issue Tracker</a>
                 <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                 <ul class="right hide-on-med-and-down">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="#">##</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="#">##</a></li>
                 </ul>
             </div>
@@ -46,7 +46,7 @@
     {% block content %}
     {% endblock %}
 
-    <footer class="container-fluid">
+    <footer class="container-fluid opacity">
         <!--Author & Github Link-->
         <div class="row">
             <div class="col-12">

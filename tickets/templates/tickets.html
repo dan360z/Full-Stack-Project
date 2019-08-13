@@ -1,7 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
 
-
 <main>
 
     <section class="row">
@@ -11,7 +10,7 @@
         </div>
     </section>
 
-    <section class="row">
+    <section class="row opacity">
         <div class="col-12 text-center intro">
             <p>This is <span>Unicon Attractor</span>'s Issue tracker!<br>
                 Unfortunately nothing is perfect and sometimes Unicorn Attractor dosen't seem work as well and even
@@ -20,12 +19,11 @@
         </div>
     </section>
 
-    <section class="row">
-        <div class="col s12 text-center tickets-heading">
+    <section class="container-fluid opacity tickets-wrapper">
+
+        <div class="col s12 tickets-heading">
             <h5>Tickets</h5>
         </div>
-    </section>
-    <section class="container-fluid">
         {% for ticket in tickets %}
         <div class="row">
             {% if ticket.category.category == "Feature" %}
