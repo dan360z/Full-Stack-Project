@@ -1,9 +1,69 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+body {
+  background-image: linear-gradient(to right, #16bffd, #cb3066);
+  font-family: 'Roboto', sans-serif; }
+
+nav {
+  background-color: #00000099; }
+  nav .brand-logo {
+    color: #fff;
+    font-size: 22px;
+    font-family: 'Pacifico', cursive; }
+    nav .brand-logo:hover {
+      text-decoration: none; }
+  nav .nav-wrapper .text-logo {
+    margin-left: 5px;
+    font-size: 25px;
+    color: #fff; }
+
+nav ul a {
+  color: #fff; }
+  nav ul a:hover {
+    text-decoration: none;
+    color: #fff; }
+
+nav .button-collapse i {
+  color: #fff; }
+
+/*----------------Intro-------------------------------------*/
+.heading-wrapper {
+  margin: 70px 0; }
+  .heading-wrapper h1, .heading-wrapper h3 {
+    font-family: 'Pacifico', cursive; }
+
+.intro {
+  padding: 15px 10px;
+  background-color: #00000099; }
+  .intro p {
+    color: #fff;
+    font-size: 18px; }
+    .intro p span {
+      font-family: 'Pacifico', cursive; }
+
 /*----------------Tickets-------------------------------------*/
+.tickets-heading {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000; }
+  .tickets-heading h4 {
+    margin: 4px 0; }
+
+.feature-bg {
+  background-color: #1782f1; }
+
+.bug-bg {
+  background-color: #ca4172; }
+
+.feature-text {
+  color: #1784f8; }
+
+.bug-text {
+  color: #f01313; }
+
 .ticket {
   color: #000;
   border: 1px solid #000;
   border-radius: 10px;
-  padding: 3px 8px;
   margin: 8px; }
   .ticket:hover {
     cursor: pointer;
@@ -13,28 +73,34 @@
     margin: 0; }
   .ticket .ticket-title {
     font-size: 18px;
+    text-align: center;
+    margin-top: 2px; }
+  .ticket .ticket-details {
     text-align: center; }
   .ticket .ticket-category {
-    display: inline; }
+    display: inline;
+    background-color: #00000091;
+    border-radius: 10px;
+    padding: 1px 5px;
+    color: #fff; }
   .ticket .ticket-status {
-    float: right; }
+    float: right;
+    background-color: #00000091;
+    border-radius: 10px;
+    padding: 1px 5px;
+    color: #fff; }
   .ticket .open {
-    color: red; }
+    color: #f01313; }
   .ticket .closed {
-    color: green; }
+    color: #12de12; }
 
 /*----------------Footer-------------------------------------*/
-footer {
-  position: absolute;
-  bottom: 0;
-  padding: 2px 0;
-  border-top: 1px solid #000; }
-  footer p {
-    margin: 0px; }
-  footer a {
-    margin-left: 5px;
-    color: #000; }
-    footer a:hover {
-      color: #4b4b4b; }
+footer p {
+  margin: 0px; }
+footer a {
+  margin-left: 5px;
+  color: #000; }
+  footer a:hover {
+    color: #4b4b4b; }
 
 /*# sourceMappingURL=custom.css.map */

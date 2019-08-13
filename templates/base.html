@@ -7,18 +7,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!--Bootstrap 4.1.3 CSS CDN Link-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
     <!--Materialize 0.100.2 CDN Link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <!--Material Icons CDN Link-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Font Awesome 5.5.0 CDN Link-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">  
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+        integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <!--My Custom Css Link-->
     <link rel="stylesheet" href="{% static 'scss/custom.css' %}">
     <title>Issue Tracker</title>
 </head>
 
 <body>
-    
+
+    <header>
+        <!--Materialize Navigation Menu-->
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Issue Tracker</a>
+                <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+                <ul class="right hide-on-med-and-down">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">##</a></li>
+                </ul>
+                <ul class="side-nav" id="mobile-demo">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">##</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!--/Materialize Navigation Menu-->
+    </header>
 
 
     {% block content %}
@@ -35,6 +57,13 @@
         <!--/Author & Github Link-->
     </footer>
 
+
+    <!--jQuery CDN-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!--Materialize JS CDN-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <!--Components JS Link-->
+    <script src="{% static 'js/components.js' %}"></script>
 </body>
 
 </html>

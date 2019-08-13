@@ -2,27 +2,51 @@
 {% block content %}
 
 
-<section class="container">
+<section class="container-fluid">
 
     <div class="row">
-        <div class="col-12">
-            hello
+        <div class="col-12 text-center heading-wrapper">
+            <h1>Unicorn Attractor</h1>
+            <h3>Issue Tracker</h3>
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-12 text-center intro">
+            <p>This is <span>Unicon Attractor</span>'s Issue tracker!<br>
+                Unfortunately nothing is perfect and sometimes Unicorn Attractor dosen't seem work as well and even
+                break.<br>
+                Whether its a bug you have found or an idea for a new feature you can submit tickets.</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col s12 text-center tickets-heading">
+            <h4>Tickets</h4>
+        </div>
+    </div>
     {% for ticket in tickets %}
     <div class="row">
-        <a href="#" class="col s12 ticket mx-auto">
-            <p class="ticket-title">{{ticket.title}}</p>
-            <p class="ticket-category">Type: {{ticket.category}}</p>
-            {% if ticket.ticket_status.ticket_status == "Open" %}
-            <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
+        {% if ticket.category.category == "Feature" %}
+        <a href="#" class="col s12 ticket mx-auto feature-bg">
             {% else %}
-            <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
-            {% endif %}
-            <p class="ticket-upvotes"><i class="far fa-thumbs-up"></i>{{ticket.upvotes}}</p>
-        </a>
+            <a href="#" class="col s12 ticket mx-auto bug-bg">
+                {% endif %}
+                <p class="ticket-title">{{ticket.title}}</p>
+                <p class="ticket-details">{{ticket.details}}</p>
+                {% if ticket.category.category == "Feature" %}
+                <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
+                {% else %}
+                <p class="ticket-category">Type: <span class="bug-text">{{ticket.category}}</span></p>
+                {% endif %}
+                {% if ticket.ticket_status.ticket_status == "Open" %}
+                <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
+                {% else %}
+                <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
+                {% endif %}
+            </a>
     </div>
     {% endfor %}
 </section>
+
 {% endblock %}
