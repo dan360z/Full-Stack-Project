@@ -1,0 +1,40 @@
+/*----------------Tickets-------------------------------------*/
+.ticket {
+  color: #000;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 3px 8px;
+  margin: 8px; }
+  .ticket:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000; }
+  .ticket p {
+    margin: 0; }
+  .ticket .ticket-title {
+    font-size: 18px;
+    text-align: center; }
+  .ticket .ticket-category {
+    display: inline; }
+  .ticket .ticket-status {
+    float: right; }
+  .ticket .open {
+    color: red; }
+  .ticket .closed {
+    color: green; }
+
+/*----------------Footer-------------------------------------*/
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 2px 0;
+  border-top: 1px solid #000; }
+  footer p {
+    margin: 0px; }
+  footer a {
+    margin-left: 5px;
+    color: #000; }
+    footer a:hover {
+      color: #4b4b4b; }
+
+/*# sourceMappingURL=custom.css.map */

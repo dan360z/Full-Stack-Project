@@ -1,15 +1,28 @@
 {% extends 'base.html' %}
 {% block content %}
 
-{% for ticket in tickets %}
 
-{{ticket.title}}
-{{ticket.category}}
-{{ticket.details}}
-{{ticket.date_created}}
-{{ticket.published_date}}
-{{ticket.upvotes}}
+<section class="container">
 
-{% endfor %}
+    <div class="row">
+        <div class="col-12">
+            hello
+        </div>
+    </div>
 
-{% endblock %}    
+    {% for ticket in tickets %}
+    <div class="row">
+        <a href="#" class="col s12 ticket mx-auto">
+            <p class="ticket-title">{{ticket.title}}</p>
+            <p class="ticket-category">Type: {{ticket.category}}</p>
+            {% if ticket.ticket_status.ticket_status == "Open" %}
+            <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
+            {% else %}
+            <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
+            {% endif %}
+            <p class="ticket-upvotes"><i class="far fa-thumbs-up"></i>{{ticket.upvotes}}</p>
+        </a>
+    </div>
+    {% endfor %}
+</section>
+{% endblock %}
