@@ -33,21 +33,30 @@
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="#">Register</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                 </ul>
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{% url 'index' %}">Home</a></li>
                     <li><a href="#">Register</a></li>
                     <li><a href="#">Profile</a></li>
-                    <li><a href="#">Login</a></li>
-                    <li><a href="#">Logout</a></li>
+                    <li><a href="{% url 'login' %}">Login</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
                 </ul>
             </div>
         </nav>
         <!--/Materialize Navigation Menu-->
     </header>
 
+    <!--Django Messages-->
+    {% if messages %}
+    <div class="dj-message-wrapper text-center opacity" id="dj-message">
+        {% for message in messages %}
+        <p>{{message}}</p>
+        {% endfor %}
+    </div>
+    {% endif %}
+    <!--/Django Messages-->
 
     {% block content %}
     {% endblock %}

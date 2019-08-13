@@ -7,6 +7,18 @@ body {
 .opacity {
   background-color: #00000099; }
 
+.dj-message-wrapper {
+  position: absolute;
+  top: 11%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 5px 17px;
+  color: #fff;
+  border-radius: 16px; }
+  .dj-message-wrapper p {
+    margin: 0; }
+
 nav {
   background-color: #00000099; }
   nav .brand-logo {

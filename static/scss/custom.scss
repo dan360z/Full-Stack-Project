@@ -12,6 +12,25 @@ body {
     background-color:#00000099;
 }
 
+//--------------Django messages-------------
+
+.dj-message-wrapper {
+    position: absolute;
+    top: 11%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    padding: 5px 17px;
+    color: #fff;
+    border-radius: 16px;
+    p {
+        margin: 0;
+    }
+}
+
+
+//---------------Navigation----------------------------
+
 nav {
     background-color:#00000099;
     .brand-logo {
