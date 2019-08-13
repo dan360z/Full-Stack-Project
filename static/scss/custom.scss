@@ -25,6 +25,13 @@ nav {
     }
 }
 
+nav .side-nav {
+    background-color: #00000099;
+    a {
+        color: #fff;
+    }
+}
+
 nav ul a {
     color: #fff;
     &:hover {
@@ -38,7 +45,7 @@ nav .button-collapse i {
 }
 
 
-/*----------------Intro-------------------------------------*/
+/*----------------Introduction-------------------------------------*/
 
 .heading-wrapper {
     margin: 70px 0;
@@ -140,6 +147,7 @@ nav .button-collapse i {
 /*----------------Footer-------------------------------------*/
 
 footer {
+    font-weight: 500;
     p {
         margin: 0px;
     }

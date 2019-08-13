@@ -17,6 +17,11 @@ nav {
     font-size: 25px;
     color: #fff; }
 
+nav .side-nav {
+  background-color: #00000099; }
+  nav .side-nav a {
+    color: #fff; }
+
 nav ul a {
   color: #fff; }
   nav ul a:hover {
@@ -26,7 +31,7 @@ nav ul a {
 nav .button-collapse i {
   color: #fff; }
 
-/*----------------Intro-------------------------------------*/
+/*----------------Introduction-------------------------------------*/
 .heading-wrapper {
   margin: 70px 0; }
   .heading-wrapper h1, .heading-wrapper h3 {
@@ -102,12 +107,14 @@ nav .button-collapse i {
     color: #12de12; }
 
 /*----------------Footer-------------------------------------*/
-footer p {
-  margin: 0px; }
-footer a {
-  margin-left: 5px;
-  color: #000; }
-  footer a:hover {
-    color: #4b4b4b; }
+footer {
+  font-weight: 500; }
+  footer p {
+    margin: 0px; }
+  footer a {
+    margin-left: 5px;
+    color: #000; }
+    footer a:hover {
+      color: #4b4b4b; }
 
 /*# sourceMappingURL=custom.css.map */
