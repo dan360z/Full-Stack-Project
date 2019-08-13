@@ -43,8 +43,8 @@ nav .button-collapse i {
 
 /*----------------Tickets-------------------------------------*/
 .tickets-heading {
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000; }
+  background-color: #00000099;
+  color: #fff; }
   .tickets-heading h4 {
     margin: 4px 0; }
 
@@ -69,6 +69,13 @@ nav .button-collapse i {
     cursor: pointer;
     text-decoration: none;
     color: #000; }
+    .ticket:hover:hover {
+      border-color: #07c4fd;
+      box-shadow: 0 0 19px 2px #07c4fd;
+      transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -webkit-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out; }
   .ticket p {
     margin: 0; }
   .ticket .ticket-title {
