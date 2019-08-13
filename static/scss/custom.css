@@ -126,14 +126,26 @@ nav .button-collapse i {
 
 /*---------------Login Page----------------------------------*/
 .login-form-wrapper {
-  padding: 20px; }
+  padding: 20px;
+  margin-bottom: 200px; }
   .login-form-wrapper .form-control {
     color: #fff; }
+  .login-form-wrapper button {
+    background-color: #1bbbf9; }
+    .login-form-wrapper button:hover {
+      background-color: #0d7ba7; }
+
+.alert-danger {
+  background-color: #00000091;
+  border: none;
+  border-radius: 16px;
+  color: #fff; }
 
 /*----------------Footer-------------------------------------*/
 footer {
-  position: absolute;
+  position: relative;
   left: 0;
+  bottom: 0;
   text-align: center;
   color: #fff; }
   footer p {

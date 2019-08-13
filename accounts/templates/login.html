@@ -12,7 +12,11 @@
 <!--/Page Title-->
 
 <section class="container opacity login-form-wrapper">
-    {{ login_form | as_bootstrap }}
+    <form method="POST">
+        {% csrf_token %}
+        {{ login_form | as_bootstrap }}
+        <button class="btn" type="submit">Login</button>
+    </form>
 </section>
 
 {% endblock %}
