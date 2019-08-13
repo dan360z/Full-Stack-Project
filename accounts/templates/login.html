@@ -1,6 +1,18 @@
 {% extends 'base.html' %}
+{% load bootstrap_tags %}
+
 {% block content %}
 
-login
+<!--Page Title-->
+<section class="row">
+    <div class="col-12 text-center heading-wrapper">
+        <h3>User Login</h3>
+    </div>
+</section>
+<!--/Page Title-->
+
+<section class="container opacity login-form-wrapper">
+    {{ login_form | as_bootstrap }}
+</section>
 
 {% endblock %}

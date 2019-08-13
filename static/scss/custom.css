@@ -124,6 +124,12 @@ nav .button-collapse i {
   .ticket .closed {
     color: #12de12; }
 
+/*---------------Login Page----------------------------------*/
+.login-form-wrapper {
+  padding: 20px; }
+  .login-form-wrapper .form-control {
+    color: #fff; }
+
 /*----------------Footer-------------------------------------*/
 footer {
   position: absolute;
