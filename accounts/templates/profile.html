@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<!--Page Title-->
+<section class="row">
+        <div class="col-12 text-center heading-wrapper">
+            <h3>{{ profile.username }}'s Profile</h3>
+        </div>
+</section>
+<!--/Page Title-->
+
+<section class="row">
+    <div class="col-10 offset-1 col-lg-6 offset-lg-3 text-center opacity user-info ">
+        <p>Email: {{ profile.email }}</p>
+    </div>
+</section>
+
+{% endblock %}

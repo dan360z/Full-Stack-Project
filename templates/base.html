@@ -32,7 +32,7 @@
                 <ul class="right hide-on-med-and-down">
                     <li><a href="{% url 'index' %}">Home</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li>
@@ -42,7 +42,7 @@
                 <ul class="side-nav" id="mobile-demo">
                     <li><a href="{% url 'index' %}">Home</a></li>
                     {% if user.is_authenticated %}
-                    <li><a href="#">Profile</a></li>
+                    <li><a href="{% url 'profile' %}">Profile</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
                     <li><a href="{% url 'login' %}">Login</a></li>
@@ -67,13 +67,11 @@
     {% block content %}
     {% endblock %}
 
-        <!--Author & Github Link-->
-        <footer class="row opacity text-center">
-            <div class="col-12">
-                <p class="d-inline">Created by Dainel Field &copy; 2019</p>
-                <a class="d-inline" href="https://github.com/dan360z" target="_blank"><i class="fab fa-github"></i></a>
-            </div>
-        </footer>
+    <!--Author & Github Link-->
+    <footer class="opacity text-center">
+            <p class="d-inline">Created by Dainel Field &copy; 2019</p>
+            <a class="d-inline" href="https://github.com/dan360z" target="_blank"><i class="fab fa-github"></i></a>
+    </footer>
         <!--/Author & Github Link-->
 
 

@@ -124,15 +124,15 @@ nav .button-collapse i {
   .ticket .closed {
     color: #12de12; }
 
-/*---------------Login Page and Registration Form----------------------------------*/
-.login-form-wrapper {
+/*---------------Login Page, Registration Form and User Profile Page----------------------------------*/
+.form-wrapper {
   padding: 20px;
-  margin-bottom: 200px; }
-  .login-form-wrapper .form-control {
+  margin-bottom: 160px; }
+  .form-wrapper .form-control {
     color: #fff; }
-  .login-form-wrapper button {
+  .form-wrapper button {
     background-color: #1bbbf9; }
-    .login-form-wrapper button:hover {
+    .form-wrapper button:hover {
       background-color: #0d7ba7; }
 
 .alert-danger {
@@ -144,12 +144,23 @@ nav .button-collapse i {
 .help-block, .error-msg {
   color: #fff; }
 
+.user-info {
+  background-color: #00000091;
+  border: none;
+  border-radius: 16px;
+  color: #fff;
+  padding: 10px;
+  margin-bottom: 350px; }
+  .user-info p {
+    margin: 0; }
+
 /*----------------Footer-------------------------------------*/
 footer {
   position: relative;
   left: 0;
   bottom: 0;
   text-align: center;
+  padding: 6px;
   color: #fff; }
   footer p {
     margin: 0px; }

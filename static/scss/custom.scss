@@ -170,11 +170,11 @@ nav .button-collapse i {
     }
 }
 
-/*---------------Login Page and Registration Form----------------------------------*/
+/*---------------Login Page, Registration Form and User Profile Page----------------------------------*/
 
-.login-form-wrapper {
+.form-wrapper {
     padding: 20px;
-    margin-bottom: 200px;
+    margin-bottom: 160px;
     .form-control {
         color: #fff;
     }
@@ -197,6 +197,18 @@ nav .button-collapse i {
     color: #fff;
 }
 
+.user-info {
+    background-color: #00000091;;
+    border: none;
+    border-radius: 16px;
+    color: #fff;
+    padding: 10px;
+    margin-bottom: 350px;
+    p {
+        margin: 0;
+    }
+}
+
 /*----------------Footer-------------------------------------*/
 
 footer {
@@ -204,6 +216,7 @@ footer {
     left: 0;
     bottom: 0;
     text-align: center;
+    padding: 6px;
     color: #fff;
     p {
         margin: 0px;
