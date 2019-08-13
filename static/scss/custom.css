@@ -124,7 +124,7 @@ nav .button-collapse i {
   .ticket .closed {
     color: #12de12; }
 
-/*---------------Login Page----------------------------------*/
+/*---------------Login Page and Registration Form----------------------------------*/
 .login-form-wrapper {
   padding: 20px;
   margin-bottom: 200px; }
@@ -139,6 +139,9 @@ nav .button-collapse i {
   background-color: #00000091;
   border: none;
   border-radius: 16px;
+  color: #fff; }
+
+.help-block, .error-msg {
   color: #fff; }
 
 /*----------------Footer-------------------------------------*/

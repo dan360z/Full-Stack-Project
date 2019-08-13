@@ -6,18 +6,17 @@
 <!--Page Title-->
 <section class="row">
     <div class="col-12 text-center heading-wrapper">
-        <h3>User Login</h3>
+        <h3>Registration</h3>
     </div>
 </section>
 <!--/Page Title-->
-<!--Login Form-->
+<!--Registration Form-->
 <section class="container opacity login-form-wrapper">
     <form method="POST">
         {% csrf_token %}
-        {{ login_form | as_bootstrap }}
-        <button class="btn" type="submit">Login</button>
+        {{ registration_form | as_bootstrap }}
+        <button class="btn" type="submit">Register</button>
     </form>
 </section>
-<!--/Login Form-->
-
+<!--/Registration Form-->
 {% endblock %}
