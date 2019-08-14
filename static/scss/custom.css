@@ -158,16 +158,17 @@ nav .button-collapse i {
     background-color: #000000bf; }
   .modal #cancel {
     background-color: #1784f8;
-    margin: 0 10px; }
+    padding: 0 20px; }
     .modal #cancel:hover {
       background-color: #0a4788; }
   .modal #delete {
     color: #fff;
-    background-color: #f01313;
-    margin: 0 10px; }
+    background-color: #e72424;
+    margin: 0 10px;
+    padding: 0 10px; }
     .modal #delete:hover {
       text-decoration: none;
-      background-color: #a10d0d; }
+      background-color: #9e1c1c; }
 
 /*----------------Full Ticket Page---------------------------------------------*/
 .ticket-container {
@@ -209,9 +210,9 @@ nav .button-collapse i {
   .ticket-container a {
     margin: 0 10px;
     padding: 0 10px 0 15px;
-    background-color: #1bbbf9; }
+    background-color: #1784f8; }
     .ticket-container a:hover {
-      background-color: #0d7ba7; }
+      background-color: #0a4788; }
   .ticket-container .delete {
     padding: 0 15px;
     background-color: #e72424; }

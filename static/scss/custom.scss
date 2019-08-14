@@ -212,18 +212,19 @@ nav .button-collapse i {
     }
     #cancel {
         background-color: #1784f8;
-        margin: 0 10px;
+        padding: 0 20px;
         &:hover {
             background-color: #0a4788;
         }
     }
     #delete {
         color: #fff;
-        background-color: #f01313;
+        background-color: #e72424;;
         margin: 0 10px;
+        padding: 0 10px;
         &:hover {
             text-decoration: none;
-            background-color: #a10d0d;
+            background-color: #9e1c1c;
         }
     }
 }
@@ -279,9 +280,9 @@ nav .button-collapse i {
     a {
         margin: 0 10px;
         padding: 0 10px 0 15px;
-        background-color: #1bbbf9;
+        background-color: #1784f8;
         &:hover {
-            background-color: #0d7ba7;
+            background-color: #0a4788;
         }
     }
     .delete {
