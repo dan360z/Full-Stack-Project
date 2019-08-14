@@ -34,10 +34,11 @@
                 <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
                 {% endif %}
 
+                {% if user.email == ticket.email %}
                 <div class="text-center">
                     <a href="{% url 'edit_post' ticket.id %}" class="btn"><i class="far fa-edit"></i></a>
                 </div>
-
+                {% endif %}
             </div>
 
         </div>

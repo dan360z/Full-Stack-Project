@@ -1,6 +1,6 @@
 from django.db import models
-from django.contrib.auth.models import User
 from django.utils import timezone
+from django.contrib.auth.models import User
 
 
 class TicketStatus(models.Model):
@@ -41,6 +41,7 @@ class Ticket(models.Model):
     This is a ticket
     """
     title = models.CharField(max_length=200)
+    email = models.EmailField(null=True)
     category = models.ForeignKey(Category, null=True)
     details = models.TextField()
     ticket_status = models.ForeignKey(TicketStatus, null=True)
