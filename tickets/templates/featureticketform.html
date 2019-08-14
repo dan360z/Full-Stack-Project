@@ -11,11 +11,20 @@
 </section>
 <!--/Page Title-->
 
+<section class="row opacity">
+    <div class="col-12 text-center intro">
+        <p><span class="feature-text">Feature</span> Tickets require a donation.<br>
+            Please use the slider to select the ammount you wish to donate.<br>
+            The minimum amount you can donate is £5.</p>
+    </div>
+</section>
+
 <!--Ticket Form-->
 <section class="container opacity form-wrapper">
     <form method="POST">
         {% csrf_token %}
         {{ form | as_bootstrap }}
+        {{ payment_form | as_bootstrap }}
         <button class="btn" type="submit">Donate</button>
     </form>
 </section>

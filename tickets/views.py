@@ -4,7 +4,7 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import Ticket
-from .forms import TicketForm
+from .forms import TicketForm, MakePaymentForm
 
 
 def get_tickets(request):
@@ -63,10 +63,11 @@ def create_or_edit_ticket(request, pk=None):
 @login_required
 def create_feature_ticket(request):
 
+    payment_form = MakePaymentForm()
     form = TicketForm()
 
 
-    return render(request, 'featureticketform.html', {'form': form})
+    return render(request, 'featureticketform.html', {'form': form, 'payment_form': payment_form})
 
 
 @login_required
