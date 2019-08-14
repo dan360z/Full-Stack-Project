@@ -141,6 +141,15 @@ nav .button-collapse i {
   background-color: #a0375c; }
 
 /*----------------Full Ticket Page---------------------------------------------*/
+.create-ticket-btn {
+  margin-bottom: 15px;
+  background-color: #6a58cc; }
+  .create-ticket-btn:hover {
+    background-color: #4e4194; }
+  .create-ticket-btn i {
+    margin-left: 7px;
+    font-size: 15px; }
+
 .ticket-container {
   margin-top: 60px;
   margin-bottom: 300px;

@@ -31,7 +31,9 @@
 
         <div class="col s12 tickets-heading">
             <h5>Tickets</h5>
-            <a href="{% url 'new_post' %}">new post</a>
+            <div class="text-center">
+                    <a class="btn create-ticket-btn" href="{% url 'new_post' %}">Create Ticket<i class="fas fa-plus"></i></a>
+            </div>
         </div>
         {% for ticket in tickets %}
         <div class="row">
