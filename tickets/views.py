@@ -4,7 +4,6 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from .models import Ticket
 from .forms import TicketForm
-# Create your views here.
 
 
 def get_tickets(request):
@@ -40,6 +39,7 @@ def upvote(request, pk):
     ticket.save()
 
     return render(request, "fullticket.html", {'ticket': ticket})
+
 
 @login_required
 def create_or_edit_ticket(request, pk=None):
