@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.utils import timezone
 from .models import Ticket
 # Create your views here.
@@ -16,6 +16,16 @@ def full_ticket(request, pk):
     displays it in fullticket.html
     """
     ticket = get_object_or_404(Ticket, pk=pk)
-    ticket.save()
+    return render(request, "fullticket.html", {'ticket': ticket})
 
-    return render(request, "fullticket.html", {'ticket': ticket})    
+
+def upvote(request, pk):
+    """
+    This increments the upvotes on a ticket by one
+    when a user clicks on the Upvote icon.
+    """
+    ticket = get_object_or_404(Ticket, pk=pk)
+    ticket.upvotes += 1
+    ticket.save()
+    
+    return render(request, "fullticket.html", {'ticket': ticket})
