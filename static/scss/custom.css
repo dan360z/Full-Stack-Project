@@ -186,10 +186,16 @@ nav .button-collapse i {
     border-radius: 10px;
     padding: 1px 5px; }
   .ticket-container a {
+    margin: 0 10px;
     padding: 0 10px 0 15px;
     background-color: #1bbbf9; }
     .ticket-container a:hover {
       background-color: #0d7ba7; }
+  .ticket-container .delete {
+    padding: 0 15px;
+    background-color: #e72424; }
+    .ticket-container .delete:hover {
+      background-color: #9e1c1c; }
 
 /*---------------Login Page, Registration Form, create/edit ticket forms and User Profile Page----------------------------------*/
 .form-wrapper {

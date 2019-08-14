@@ -249,10 +249,18 @@ nav .button-collapse i {
         padding: 1px 5px;
     }
     a {
+        margin: 0 10px;
         padding: 0 10px 0 15px;
         background-color: #1bbbf9;
         &:hover {
             background-color: #0d7ba7;
+        }
+    }
+    .delete {
+        padding: 0 15px;
+        background-color: #e72424;
+        &:hover {
+            background-color: #9e1c1c;
         }
     }
 }

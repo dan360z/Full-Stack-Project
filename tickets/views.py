@@ -29,7 +29,7 @@ def full_ticket(request, pk):
     ticket = get_object_or_404(Ticket, pk=pk)
     return render(request, "fullticket.html", {'ticket': ticket}, {'user': user})
 
-
+@login_required
 def upvote(request, pk):
     """
     This increments the upvotes on a ticket by one
@@ -57,4 +57,14 @@ def create_or_edit_ticket(request, pk=None):
             return redirect(full_ticket, ticket.pk)
     else:
         form = TicketForm(instance=ticket)
-    return render(request, 'ticketform.html', {'form': form})    
+    return render(request, 'ticketform.html', {'form': form}) 
+
+@login_required
+def delete_ticket(request, pk):
+    """
+    This deletes a ticket.
+    """
+    ticket = get_object_or_404(Ticket, pk=pk)
+    ticket.delete()
+    messages.success(request, "Your ticket has been deleted!")
+    return redirect(get_tickets)
