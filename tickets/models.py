@@ -18,6 +18,7 @@ class TicketStatus(models.Model):
     def __str__(self):
         return self.ticket_status
 
+        
 class Category(models.Model):
     """
     This is the ticket category choices

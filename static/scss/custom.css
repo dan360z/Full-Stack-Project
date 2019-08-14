@@ -20,7 +20,7 @@ body {
     margin: 0; }
 
 nav {
-  background-color: #00000099; }
+  background-color: #000000bf; }
   nav .brand-logo {
     color: #fff;
     font-size: 22px;
@@ -51,19 +51,26 @@ nav .button-collapse i {
   margin: 70px 0; }
   .heading-wrapper h1, .heading-wrapper h3 {
     font-family: 'Pacifico', cursive; }
+  .heading-wrapper h1 {
+    color: #fff;
+    text-shadow: 0 0 5px #000, 0 0 15px #8d94e2, 0 0 20px #8d94e2, 0 0 25px #8d94e2, 0 0 30px #8d94e2, 0 0 35px #8d94e2; }
 
 .intro {
   padding: 15px 10px; }
   .intro p {
     color: #fff;
     font-size: 18px; }
-    .intro p span {
-      font-family: 'Pacifico', cursive; }
+    .intro p .sm-logo {
+      font-family: 'Pacifico', cursive;
+      text-shadow: 0 0 5px #000, 0 0 15px #8d94e2, 0 0 20px #8d94e2; }
+    .intro p .bug-text {
+      color: #ca4172; }
+    .intro p .feature-text {
+      color: #1782f1; }
 
 /*----------------Tickets-------------------------------------*/
 .tickets-wrapper {
-  padding-bottom: 10px;
-  margin-bottom: 60px; }
+  padding-bottom: 10px; }
 
 .tickets-heading {
   color: #fff; }
@@ -156,6 +163,7 @@ nav .button-collapse i {
 
 /*----------------Footer-------------------------------------*/
 footer {
+  background-color: #000000bf;
   position: relative;
   left: 0;
   bottom: 0;

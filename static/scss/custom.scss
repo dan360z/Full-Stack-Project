@@ -32,7 +32,7 @@ body {
 //---------------Navigation----------------------------
 
 nav {
-    background-color:#00000099;
+    background-color: #000000bf;
     .brand-logo {
         color: #fff;
         font-size: 22px;
@@ -75,14 +75,25 @@ nav .button-collapse i {
     h1, h3 {
         font-family: 'Pacifico', cursive;
     }
+    h1 {
+        color: #fff;
+        text-shadow: 0 0 5px #000, 0 0 15px #8d94e2, 0 0 20px #8d94e2, 0 0 25px #8d94e2, 0 0 30px #8d94e2, 0 0 35px #8d94e2;
+    }
 }
  .intro {
     padding: 15px 10px;
     p {
         color: #fff;
         font-size: 18px;
-        span {
+        .sm-logo {
             font-family: 'Pacifico', cursive;
+            text-shadow: 0 0 5px #000, 0 0 15px #8d94e2, 0 0 20px #8d94e2;
+        }
+        .bug-text {
+            color: #ca4172;
+        }
+        .feature-text {
+            color: #1782f1;
         }
     }
  }
@@ -92,7 +103,6 @@ nav .button-collapse i {
 
 .tickets-wrapper {
     padding-bottom: 10px;
-    margin-bottom: 60px;
 }
 
 .tickets-heading {
@@ -212,6 +222,7 @@ nav .button-collapse i {
 /*----------------Footer-------------------------------------*/
 
 footer {
+    background-color: #000000bf;
     position: relative;
     left: 0;
     bottom: 0;
