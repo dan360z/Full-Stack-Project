@@ -149,6 +149,26 @@ nav .button-collapse i {
 .hr-red {
   background-color: #a0375c; }
 
+/*------------------------Delete Modal------------------------------------*/
+.modal {
+  color: #fff;
+  height: auto;
+  background-color: transparent; }
+  .modal .modal-content, .modal .modal-footer {
+    background-color: #000000bf; }
+  .modal #cancel {
+    background-color: #1784f8;
+    margin: 0 10px; }
+    .modal #cancel:hover {
+      background-color: #0a4788; }
+  .modal #delete {
+    color: #fff;
+    background-color: #f01313;
+    margin: 0 10px; }
+    .modal #delete:hover {
+      text-decoration: none;
+      background-color: #a10d0d; }
+
 /*----------------Full Ticket Page---------------------------------------------*/
 .ticket-container {
   margin-top: 60px;

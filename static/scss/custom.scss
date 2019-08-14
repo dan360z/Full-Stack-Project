@@ -201,6 +201,33 @@ nav .button-collapse i {
     background-color: #a0375c;
 }
 
+/*------------------------Delete Modal------------------------------------*/
+
+.modal {
+    color: #fff;
+    height: auto;
+    background-color: transparent;
+    .modal-content, .modal-footer {
+        background-color: #000000bf;
+    }
+    #cancel {
+        background-color: #1784f8;
+        margin: 0 10px;
+        &:hover {
+            background-color: #0a4788;
+        }
+    }
+    #delete {
+        color: #fff;
+        background-color: #f01313;
+        margin: 0 10px;
+        &:hover {
+            text-decoration: none;
+            background-color: #a10d0d;
+        }
+    }
+}
+
 /*----------------Full Ticket Page---------------------------------------------*/
 
 .ticket-container {

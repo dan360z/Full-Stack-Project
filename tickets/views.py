@@ -65,7 +65,7 @@ def create_feature_ticket(request):
 
     payment_form = MakePaymentForm()
     form = TicketForm()
-
+    
 
     return render(request, 'featureticketform.html', {'form': form, 'payment_form': payment_form})
 
