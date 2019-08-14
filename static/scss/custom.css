@@ -50,8 +50,7 @@ nav .button-collapse i {
 .heading-wrapper {
   margin: 70px 0; }
   .heading-wrapper h1, .heading-wrapper h3 {
-    font-family: 'Pacifico', cursive; }
-  .heading-wrapper h1 {
+    font-family: 'Pacifico', cursive;
     color: #fff;
     text-shadow: 0 0 5px #000, 0 0 15px #8d94e2, 0 0 20px #8d94e2, 0 0 25px #8d94e2, 0 0 30px #8d94e2, 0 0 35px #8d94e2; }
 
