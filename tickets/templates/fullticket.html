@@ -36,7 +36,7 @@
 
                 {% if user.email == ticket.email %}
                 <div class="text-center">
-                    <a href="{% url 'edit_post' ticket.id %}" class="btn"><i class="far fa-edit"></i></a>
+                    <a href="{% url 'edit_ticket' ticket.id %}" class="btn"><i class="far fa-edit"></i></a>
                 </div>
                 {% endif %}
             </div>

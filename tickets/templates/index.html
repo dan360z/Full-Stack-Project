@@ -8,7 +8,7 @@
         <div class="col-12 text-center heading-wrapper">
             <h1>Unicorn Attractor</h1>
             <h3>Issue Tracker</h3>
-            
+
         </div>
     </section>
     <!--/Logo-->
@@ -32,9 +32,11 @@
         <div class="col s12 tickets-heading">
             <h5>Tickets</h5>
             <div class="text-center">
-                    <a class="btn create-ticket-btn" href="{% url 'new_post' %}">Create Ticket<i class="fas fa-plus"></i></a>
+                <a class="btn create-ticket-btn" href="#">Create Feature Ticket<i class="fas fa-plus"></i></a>
+                <a class="btn create-ticket-btn" href="{% url 'create_ticket' %}">Create Bug Ticket<i class="fas fa-plus"></i></a>
             </div>
         </div>
+
         {% for ticket in tickets %}
         <div class="row">
             {% if ticket.category.category == "Feature" %}

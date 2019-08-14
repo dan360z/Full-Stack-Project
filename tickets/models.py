@@ -42,9 +42,9 @@ class Ticket(models.Model):
     """
     title = models.CharField(max_length=200)
     email = models.EmailField(null=True)
-    category = models.ForeignKey(Category, null=True)
+    category = models.ForeignKey(Category, null=True, default='3')
     details = models.TextField()
-    ticket_status = models.ForeignKey(TicketStatus, null=True)
+    ticket_status = models.ForeignKey(TicketStatus, null=True, default='1')
     date_created = models.DateTimeField(blank=False, null=False, auto_now_add=True)
     published_date = models.DateTimeField(blank=False, null=False, default=timezone.now)
     upvotes = models.IntegerField(default=0)

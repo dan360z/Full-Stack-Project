@@ -6,10 +6,10 @@ $(document).ready(function () {
     $('.button-collapse').sideNav();
 
     //This hides the django feed back messages after 6 seconds----------
-    setTimeout(function(){
+    setTimeout(function () {
         $('#dj-message').hide();
     }, 6000);
- 
+
 
 });
 
