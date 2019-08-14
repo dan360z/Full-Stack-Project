@@ -59,6 +59,16 @@ def create_or_edit_ticket(request, pk=None):
         form = TicketForm(instance=ticket)
     return render(request, 'ticketform.html', {'form': form}) 
 
+
+@login_required
+def create_feature_ticket(request):
+
+    form = TicketForm()
+
+
+    return render(request, 'featureticketform.html', {'form': form})
+
+
 @login_required
 def delete_ticket(request, pk):
     """
@@ -67,4 +77,4 @@ def delete_ticket(request, pk):
     ticket = get_object_or_404(Ticket, pk=pk)
     ticket.delete()
     messages.success(request, "Your ticket has been deleted!")
-    return redirect(get_tickets)
+    return redirect(get_tickets)    
