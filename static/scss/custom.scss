@@ -247,13 +247,17 @@ nav .button-collapse i {
     }
 }
 
-/*---------------Login Page, Registration Form and User Profile Page----------------------------------*/
+/*---------------Login Page, Registration Form, create/edit ticket forms and User Profile Page----------------------------------*/
 
 .form-wrapper {
     padding: 20px;
     margin-bottom: 160px;
     .form-control {
         color: #fff;
+        background-color: transparent;
+    }
+    #id_category, #id_ticket_status {
+        background-color: #00000091;
     }
     button {
         background-color: #33e279;
@@ -275,7 +279,7 @@ nav .button-collapse i {
 }
 
 .user-info {
-    background-color: #00000091;;
+    background-color: #00000091;
     border: none;
     border-radius: 16px;
     color: #fff;

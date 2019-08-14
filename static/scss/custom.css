@@ -183,12 +183,15 @@ nav .button-collapse i {
     .ticket-container a:hover {
       background-color: #0d7ba7; }
 
-/*---------------Login Page, Registration Form and User Profile Page----------------------------------*/
+/*---------------Login Page, Registration Form, create/edit ticket forms and User Profile Page----------------------------------*/
 .form-wrapper {
   padding: 20px;
   margin-bottom: 160px; }
   .form-wrapper .form-control {
-    color: #fff; }
+    color: #fff;
+    background-color: transparent; }
+  .form-wrapper #id_category, .form-wrapper #id_ticket_status {
+    background-color: #00000091; }
   .form-wrapper button {
     background-color: #33e279; }
     .form-wrapper button:hover {

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load bootstrap_tags %}
+
+{% block content %}
+
+<!--Page Title-->
+<section class="row">
+    <div class="col-12 text-center heading-wrapper">
+        <h3>Ticket Editor</h3>
+    </div>
+</section>
+<!--/Page Title-->
+<!--Registration Form-->
+<section class="container opacity form-wrapper">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form | as_bootstrap }}
+        <button class="btn" type="submit">Save</button>
+    </form>
+</section>
+<!--/Registration Form-->
+{% endblock %}
