@@ -129,6 +129,13 @@ nav .button-collapse i {
     color: #f01313;
 }
 
+.open {
+    color: #f01313;
+}
+.closed {
+    color: #12de12;
+}
+
 .ticket {
     color: #000;
     border: 1px solid #000;
@@ -151,15 +158,16 @@ nav .button-collapse i {
         margin: 0;
     }
     .ticket-title {
+        font-weight: 500;
         font-size: 18px;
         text-align: center;
-        margin-top: 2px;
+        margin-top: 4px;
     }
-    .ticket-details {
-        text-align: center;
+    .hr-blue, .hr-red {
+        margin: 4px;
     }
     .ticket-category {
-        display: inline;
+        display: inline-block;
         background-color: #00000091;
         border-radius: 10px;
         padding: 1px 5px;
@@ -172,11 +180,70 @@ nav .button-collapse i {
         padding: 1px 5px;
         color: #fff;
     }
-    .open {
-        color: #f01313;
+}
+
+.hr-blue {
+    background-color: #1259a2;
+}
+
+.hr-red {
+    background-color: #a0375c;
+}
+
+/*----------------Full Ticket Page---------------------------------------------*/
+
+.ticket-container {
+    margin-top: 60px;
+    margin-bottom: 300px;
+    padding-bottom: 12px;
+    border: 1px solid #000;
+    border-radius: 10px;
+
+    .published-date {
+        font-weight: 500;
+        margin: 5px;
     }
-    .closed {
-        color: #12de12;
+    .ticket-title {
+        font-weight: 500;
+    }
+    .ticket-details {
+        font-size: 17px;
+    }
+
+    .upvote {
+        float: right;
+        color: #fff;
+        background-color: #00000091;
+        border-radius: 10px;
+        padding: 3px 5px;
+        &:hover {
+            text-decoration: none;
+            border-color: #07c4fd;
+            box-shadow: 0 0 19px 2px #07c4fd;
+            transition: all 0.30s ease-in-out;
+            -moz-transition: all 0.30s ease-in-out;
+            -webkit-transition: all 0.30s ease-in-out;
+            -o-transition: all 0.30s ease-in-out;
+        }
+        i {
+            color: #1887fa;
+            font-size: 20px;
+        }
+    }
+
+    .ticket-status, .ticket-category {
+        display: inline-block;
+        color: #fff;
+        background-color: #00000091;
+        border-radius: 10px;
+        padding: 1px 5px;
+    }
+    a {
+        padding: 0 10px 0 15px;
+        background-color: #1bbbf9;
+        &:hover {
+            background-color: #0d7ba7;
+        }
     }
 }
 
@@ -189,9 +256,9 @@ nav .button-collapse i {
         color: #fff;
     }
     button {
-        background-color: #1bbbf9;
+        background-color: #33e279;
         &:hover {
-            background-color: #0d7ba7;
+            background-color: #26aa5b;
         }
     }
 }

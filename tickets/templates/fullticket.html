@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block content %}
+
+
+<section class="container">
+    <div class="row">
+
+        {% if ticket.category.category == "Feature" %}
+        <div class="col-12 col-lg-10 offset-lg-1 ticket-container feature-bg">
+            {% else %}
+            <div class="col-12 col-lg-10 offset-lg-1 ticket-container bug-bg">
+                {% endif %}
+
+                <p class="published-date">{{ticket.published_date}}</p>
+
+                <h4 class="text-center">{{ticket.title}}</h4>
+                {% if ticket.category.category == "Feature" %}
+                <hr class="hr-blue">
+                {% else %}
+                <hr class="hr-red">
+                {% endif %}
+                <p class="ticket-details text-center">{{ticket.details}}</p>
+
+                {% if ticket.category.category == "Feature" %}
+                <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
+                {% else %}
+                <p class="ticket-category">Type: <span class="bug-text">{{ticket.category}}</span></p>
+                {% endif %}
+                <a class="upvote" href="#"><i class="far fa-thumbs-up"></i><span> {{ticket.upvotes}}</span></a>
+                <br>
+                {% if ticket.ticket_status.ticket_status == "Open" %}
+                <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
+                {% else %}
+                <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
+                {% endif %}
+
+                <div class="text-center">
+                    <a href="#" class="btn"><i class="far fa-edit"></i></a>
+                </div>
+
+            </div>
+
+        </div>
+</section>
+
+{% endblock %}

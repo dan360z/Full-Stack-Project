@@ -90,6 +90,12 @@ nav .button-collapse i {
 .bug-text {
   color: #f01313; }
 
+.open {
+  color: #f01313; }
+
+.closed {
+  color: #12de12; }
+
 .ticket {
   color: #000;
   border: 1px solid #000;
@@ -109,13 +115,14 @@ nav .button-collapse i {
   .ticket p {
     margin: 0; }
   .ticket .ticket-title {
+    font-weight: 500;
     font-size: 18px;
     text-align: center;
-    margin-top: 2px; }
-  .ticket .ticket-details {
-    text-align: center; }
+    margin-top: 4px; }
+  .ticket .hr-blue, .ticket .hr-red {
+    margin: 4px; }
   .ticket .ticket-category {
-    display: inline;
+    display: inline-block;
     background-color: #00000091;
     border-radius: 10px;
     padding: 1px 5px;
@@ -126,10 +133,55 @@ nav .button-collapse i {
     border-radius: 10px;
     padding: 1px 5px;
     color: #fff; }
-  .ticket .open {
-    color: #f01313; }
-  .ticket .closed {
-    color: #12de12; }
+
+.hr-blue {
+  background-color: #1259a2; }
+
+.hr-red {
+  background-color: #a0375c; }
+
+/*----------------Full Ticket Page---------------------------------------------*/
+.ticket-container {
+  margin-top: 60px;
+  margin-bottom: 300px;
+  padding-bottom: 12px;
+  border: 1px solid #000;
+  border-radius: 10px; }
+  .ticket-container .published-date {
+    font-weight: 500;
+    margin: 5px; }
+  .ticket-container .ticket-title {
+    font-weight: 500; }
+  .ticket-container .ticket-details {
+    font-size: 17px; }
+  .ticket-container .upvote {
+    float: right;
+    color: #fff;
+    background-color: #00000091;
+    border-radius: 10px;
+    padding: 3px 5px; }
+    .ticket-container .upvote:hover {
+      text-decoration: none;
+      border-color: #07c4fd;
+      box-shadow: 0 0 19px 2px #07c4fd;
+      transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -webkit-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out; }
+    .ticket-container .upvote i {
+      color: #1887fa;
+      font-size: 20px; }
+  .ticket-container .ticket-status, .ticket-container .ticket-category {
+    display: inline-block;
+    color: #fff;
+    background-color: #00000091;
+    border-radius: 10px;
+    padding: 1px 5px; }
+  .ticket-container a {
+    padding: 0 10px 0 15px;
+    background-color: #1bbbf9; }
+    .ticket-container a:hover {
+      background-color: #0d7ba7; }
 
 /*---------------Login Page, Registration Form and User Profile Page----------------------------------*/
 .form-wrapper {
@@ -138,9 +190,9 @@ nav .button-collapse i {
   .form-wrapper .form-control {
     color: #fff; }
   .form-wrapper button {
-    background-color: #1bbbf9; }
+    background-color: #33e279; }
     .form-wrapper button:hover {
-      background-color: #0d7ba7; }
+      background-color: #26aa5b; }
 
 .alert-danger {
   background-color: #00000091;

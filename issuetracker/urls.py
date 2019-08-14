@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from tickets.views import get_tickets
-from accounts import urls as urls_accounts 
+from accounts import urls as urls_accounts
+from tickets import urls as urls_tickets 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', get_tickets, name='index'),
     url(r'^accounts/', include(urls_accounts)),
+    url(r'^tickets/', include(urls_tickets)),
 ]
