@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404, redirect, reverse
 from django.utils import timezone
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
+from django.contrib import messages
 from .models import Ticket
 from .forms import TicketForm
 
@@ -52,6 +53,7 @@ def create_or_edit_ticket(request, pk=None):
         form = TicketForm(request.POST, instance=ticket)
         if form.is_valid():
             ticket = form.save()
+            messages.success(request, "Your ticket has been saved!")
             return redirect(full_ticket, ticket.pk)
     else:
         form = TicketForm(instance=ticket)
