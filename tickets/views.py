@@ -5,6 +5,7 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import Ticket
 from .forms import TicketForm, MakePaymentForm
+import stripe
 
 
 def get_tickets(request):
@@ -63,11 +64,44 @@ def create_or_edit_ticket(request, pk=None):
 @login_required
 def create_feature_ticket(request):
 
-    payment_form = MakePaymentForm()
-    form = TicketForm()
-    
+    if request.method == "POST":
 
-    return render(request, 'featureticketform.html', {'form': form, 'payment_form': payment_form})
+        ticket_form = TicketForm(request.POST)
+        payment_form = MakePaymentForm(request.POST)
+
+        if ticket_form.is_valid() and payment_form.is_valid():
+
+            donation = 0
+            donation += int(request.POST.get("donation"))
+
+            try:
+                customer = stripe.Charge.create(
+                    amount = int(donation * 100),
+                    currency = "GBP",
+                    description = request.user.email,
+                    card = payment_form.cleaned_data['stripe_id'],
+                )
+            except stripe.error.CardError:
+                messages.error(request, "Your card was declined!")
+
+            if customer.paid:
+                #If the payment was successful the ticket is saved.
+                ticket_form.instance.category_id = 4
+                ticket = ticket_form.save()
+                messages.success(request, "Thank you for your donation your Feature ticket has been saved!")
+                return redirect(full_ticket, ticket.pk)            
+            else:
+                messages.error(request, "Unable to take payment")
+
+        else:
+            print(payment_form.errors)
+            messages.error(request, "We were unable to take a payment with that card!")                
+        
+    else:
+        ticket_form = TicketForm()
+        payment_form = MakePaymentForm()
+    
+    return render(request, 'featureticketform.html', {'form': ticket_form, 'payment_form': payment_form})
 
 
 @login_required
