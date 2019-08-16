@@ -68,6 +68,9 @@ nav .button-collapse i {
       color: #1782f1; }
 
 /*----------------Tickets-------------------------------------*/
+.tickets-wrapper {
+  padding: 0 2.5%; }
+
 .create-ticket-btn {
   margin: 0 15px 20px 15px;
   color: #000;

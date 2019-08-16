@@ -29,41 +29,47 @@
     <!--Tickets Section-->
     <section class="container-fluid opacity tickets-wrapper">
 
-        <div class="col s12 tickets-heading">
-            <h5>Tickets</h5>
-            <div class="text-center">
-                <a class="btn create-ticket-btn" href="{% url 'create_feature_ticket' %}">Create <span class="feature-text">Feature</span> Ticket<i class="fas fa-plus"></i></a>
-                <a class="btn create-ticket-btn" href="{% url 'create_ticket' %}">Create <span class="bug-text">Bug</span> Ticket<i class="fas fa-plus"></i></a>
+        <div class="row">
+            <div class="col s12 tickets-heading">
+                <h5>Tickets</h5>
+                <div class="text-center">
+                    <a class="btn create-ticket-btn" href="{% url 'create_feature_ticket' %}">Create <span
+                            class="feature-text">Feature</span> Ticket<i class="fas fa-plus"></i></a>
+                    <a class="btn create-ticket-btn" href="{% url 'create_ticket' %}">Create <span
+                            class="bug-text">Bug</span> Ticket<i class="fas fa-plus"></i></a>
+                </div>
             </div>
         </div>
 
-        {% for ticket in tickets %}
-        <div class="row">
-            {% if ticket.category.category == "Feature" %}
-            <a href="{% url 'full_ticket' ticket.id %}" class="col s12 ticket mx-auto feature-bg">
-                {% else %}
-                <a href="{% url 'full_ticket' ticket.id %}" class="col s12 ticket mx-auto bug-bg">
-                    {% endif %}
-                    <p class="ticket-title">{{ticket.title}}</p>
-                    {% if ticket.category.category == "Feature" %}
-                    <hr class="hr-blue">
+        <div class="tickets-wrapper">
+            {% for ticket in tickets %}
+            <div class="row">
+                {% if ticket.category.category == "Feature" %}
+                <a href="{% url 'full_ticket' ticket.id %}" class="col s12 ticket mx-auto feature-bg">
                     {% else %}
-                    <hr class="hr-red">
-                    {% endif %}
-                    <p class="text-center ticket-details">{{ticket.details |truncatewords:20}}</p>
-                    {% if ticket.category.category == "Feature" %}
-                    <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
-                    {% else %}
-                    <p class="ticket-category">Type: <span class="bug-text">{{ticket.category}}</span></p>
-                    {% endif %}
-                    {% if ticket.ticket_status.ticket_status == "Open" %}
-                    <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
-                    {% else %}
-                    <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
-                    {% endif %}
-                </a>
+                    <a href="{% url 'full_ticket' ticket.id %}" class="col s12 ticket mx-auto bug-bg">
+                        {% endif %}
+                        <p class="ticket-title">{{ticket.title}}</p>
+                        {% if ticket.category.category == "Feature" %}
+                        <hr class="hr-blue">
+                        {% else %}
+                        <hr class="hr-red">
+                        {% endif %}
+                        <p class="text-center ticket-details">{{ticket.details |truncatewords:20}}</p>
+                        {% if ticket.category.category == "Feature" %}
+                        <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
+                        {% else %}
+                        <p class="ticket-category">Type: <span class="bug-text">{{ticket.category}}</span></p>
+                        {% endif %}
+                        {% if ticket.ticket_status.ticket_status == "Open" %}
+                        <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>
+                        {% else %}
+                        <p class="ticket-status">Status: <span class="closed">{{ticket.ticket_status}}</span></p>
+                        {% endif %}
+                    </a>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </section>
     <!--/Tickets Section-->
 
