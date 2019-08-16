@@ -50,7 +50,7 @@
                     {% else %}
                     <hr class="hr-red">
                     {% endif %}
-                    <p class="text-center">{{ticket.details}}</p>
+                    <p class="text-center ticket-details">{{ticket.details |truncatewords:20}}</p>
                     {% if ticket.category.category == "Feature" %}
                     <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
                     {% else %}

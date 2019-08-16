@@ -174,6 +174,9 @@ nav .button-collapse i {
         text-align: center;
         margin-top: 4px;
     }
+    .ticket-details {
+        margin-bottom: 8px;
+    }
     .hr-blue, .hr-red {
         margin: 4px;
     }
@@ -201,33 +204,6 @@ nav .button-collapse i {
     background-color: #a0375c;
 }
 
-/*------------------------Delete Modal------------------------------------*/
-
-.modal {
-    color: #fff;
-    height: auto;
-    background-color: transparent;
-    .modal-content, .modal-footer {
-        background-color: #000000bf;
-    }
-    #cancel {
-        background-color: #1784f8;
-        padding: 0 20px;
-        &:hover {
-            background-color: #0a4788;
-        }
-    }
-    #delete {
-        color: #fff;
-        background-color: #e72424;;
-        margin: 0 10px;
-        padding: 0 10px;
-        &:hover {
-            text-decoration: none;
-            background-color: #9e1c1c;
-        }
-    }
-}
 
 /*----------------Full Ticket Page---------------------------------------------*/
 
@@ -301,6 +277,36 @@ nav .button-collapse i {
         }
     }
 }
+
+
+/*------------------------Delete Modal------------------------------------*/
+
+.modal {
+    color: #fff;
+    height: auto;
+    background-color: transparent;
+    .modal-content, .modal-footer {
+        background-color: #000000bf;
+    }
+    #cancel {
+        background-color: #1784f8;
+        padding: 0 20px;
+        &:hover {
+            background-color: #0a4788;
+        }
+    }
+    #delete {
+        color: #fff;
+        background-color: #e72424;;
+        margin: 0 10px;
+        padding: 0 10px;
+        &:hover {
+            text-decoration: none;
+            background-color: #9e1c1c;
+        }
+    }
+}
+
 
 /*---------------Login Page, Registration Form, create/edit/feature ticket forms and User Profile Page----------------------------------*/
 
