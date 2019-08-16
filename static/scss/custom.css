@@ -252,6 +252,9 @@ nav .button-collapse i {
   .user-info p {
     margin: 0; }
 
+#stripe-error-message {
+  color: #c6346b; }
+
 /*----------------Footer-------------------------------------*/
 footer {
   background-color: #000000bf;

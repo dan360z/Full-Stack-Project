@@ -1,4 +1,4 @@
-{% load static from staticfiles %}
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,6 +19,7 @@
     <!--My Custom Css Link-->
     <link rel="stylesheet" href="{% static 'scss/custom.css' %}">
     <title>Issue Tracker</title>
+
 </head>
 
 <body>
@@ -74,13 +75,15 @@
     </footer>
         <!--/Author & Github Link-->
 
-
+    
     <!--jQuery CDN-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!--Materialize JS CDN-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <!--Components JS Link-->
     <script src="{% static 'js/components.js' %}"></script>
+    {% block head_js %}
+    {% endblock head_js %}
 </body>
 
 </html>

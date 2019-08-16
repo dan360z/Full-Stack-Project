@@ -5,16 +5,20 @@ from django.contrib.auth.models import User
 from django.contrib import messages
 from .models import Ticket
 from .forms import TicketForm, MakePaymentForm
+from django.conf import settings
 import stripe
+
+
+stripe.api_key = settings.STRIPE_SECRET
 
 
 def get_tickets(request):
     """
     This renders the index page and displays all tickets.
     """       
-
     tickets = Ticket.objects.filter(published_date__lte=timezone.now()).order_by('-published_date')
     return render(request, "index.html", {'tickets': tickets})
+
 
 def full_ticket(request, pk):
     """
@@ -29,6 +33,7 @@ def full_ticket(request, pk):
 
     ticket = get_object_or_404(Ticket, pk=pk)
     return render(request, "fullticket.html", {'ticket': ticket}, {'user': user})
+
 
 @login_required
 def upvote(request, pk):
@@ -46,7 +51,7 @@ def upvote(request, pk):
 @login_required
 def create_or_edit_ticket(request, pk=None):
     """
-    This Creates a new ticket or edits an existing ticket
+    This Creates a new bug ticket or edits an existing ticket
     if the is a ticket ID.
     """
     ticket = get_object_or_404(Ticket, pk=pk) if pk else None
@@ -63,6 +68,11 @@ def create_or_edit_ticket(request, pk=None):
 
 @login_required
 def create_feature_ticket(request):
+    """
+    This renders a ticket form and a payment form.
+    If both forms are valid and a payment is succsessful
+    a feature ticket is created.
+    """
 
     if request.method == "POST":
 
@@ -88,7 +98,7 @@ def create_feature_ticket(request):
                 #If the payment was successful the ticket is saved.
                 ticket_form.instance.category_id = 4
                 ticket = ticket_form.save()
-                messages.success(request, "Thank you for your donation your Feature ticket has been saved!")
+                messages.success(request, "Thank you for your donation, your ticket has been saved!")
                 return redirect(full_ticket, ticket.pk)            
             else:
                 messages.error(request, "Unable to take payment")
@@ -101,7 +111,7 @@ def create_feature_ticket(request):
         ticket_form = TicketForm()
         payment_form = MakePaymentForm()
     
-    return render(request, 'featureticketform.html', {'form': ticket_form, 'payment_form': payment_form})
+    return render(request, 'featureticketform.html', {'form': ticket_form, 'payment_form': payment_form, 'publishable': settings.STRIPE_PUBLISHABLE})
 
 
 @login_required
