@@ -43,9 +43,10 @@ def upvote(request, pk):
     """
     ticket = get_object_or_404(Ticket, pk=pk)
     ticket.upvotes += 1
+    voted = True
     ticket.save()
 
-    return render(request, "fullticket.html", {'ticket': ticket})
+    return render(request, "fullticket.html", {'ticket': ticket, 'voted': voted})
 
 
 @login_required

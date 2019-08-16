@@ -26,7 +26,11 @@
                 {% else %}
                 <p class="ticket-category">Type: <span class="bug-text">{{ticket.category}}</span></p>
                 {% endif %}
+                {% if voted %}
+                <p class="upvote voted" href="{% url 'upvote' ticket.id %}"><i class="far fa-thumbs-up"></i><span> {{ticket.upvotes}}</span></p>
+                {% else %}
                 <a class="upvote" href="{% url 'upvote' ticket.id %}"><i class="far fa-thumbs-up"></i><span> {{ticket.upvotes}}</span></a>
+                {% endif %}
                 <br>
                 {% if ticket.ticket_status.ticket_status == "Open" %}
                 <p class="ticket-status">Status: <span class="open">{{ticket.ticket_status}}</span></p>

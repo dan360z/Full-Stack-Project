@@ -191,8 +191,8 @@ nav .button-collapse i {
     border-radius: 10px;
     padding: 3px 5px; }
     .ticket-container .upvote:hover {
+      background-color: #000000bf;
       text-decoration: none;
-      border-color: #07c4fd;
       box-shadow: 0 0 19px 2px #07c4fd;
       transition: all 0.30s ease-in-out;
       -moz-transition: all 0.30s ease-in-out;
@@ -201,6 +201,11 @@ nav .button-collapse i {
     .ticket-container .upvote i {
       color: #1887fa;
       font-size: 20px; }
+  .ticket-container .voted {
+    margin: 0 10px; }
+    .ticket-container .voted:hover {
+      box-shadow: none;
+      background-color: #00000091; }
   .ticket-container .ticket-status, .ticket-container .ticket-category {
     display: inline-block;
     color: #fff;
