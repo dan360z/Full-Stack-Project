@@ -32,7 +32,7 @@ STRIPE_PUBLISHABLE = os.environ.get('STRIPE_PUBLISHABLE')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['fullstack-project-dan.herokuapp.com']
+ALLOWED_HOSTS = ['fullstack-project-dan.herokuapp.com', '127.0.0.1']
 
 
 # Application definition
