@@ -14,13 +14,14 @@ $(document).ready(function () {
     }, 6000);
 
 
-    //This shows the ticket details when a user hovers over the ticket------
-    $('.details').hide();
+    //This shows the ticket details when a user hovers over the ticket if the screen size is greater than that of an Ipad pro------
+    if ($(window).width() > 1024) {
+        $('.details').hide();
 
-    $('.ticket').hover( function() {
-        $(this).find('.details').slideToggle();
-    });
-
+        $('.ticket').hover(function () {
+            $(this).find('.details').slideToggle();
+        });
+    }
 
 
 });
