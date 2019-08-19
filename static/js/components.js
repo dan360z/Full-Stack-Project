@@ -13,7 +13,16 @@ $(document).ready(function () {
         $('#dj-message').hide();
     }, 6000);
 
-    
+
+    //This shows the ticket details when a user hovers over the ticket------
+    $('.details').hide();
+
+    $('.ticket').hover( function() {
+        $(this).find('.details').slideToggle();
+    });
+
+
+
 });
 
 
