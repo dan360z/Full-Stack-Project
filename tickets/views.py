@@ -98,6 +98,7 @@ def create_feature_ticket(request):
 
             if customer.paid:
                 #If the payment was successful the ticket is saved.
+                ticket_form.instance.email = request.user.email
                 ticket_form.instance.category_id = 2
                 ticket = ticket_form.save()
                 messages.success(request, "Thank you for your donation, your ticket has been saved!")
