@@ -22,9 +22,9 @@ an idea for a new feature.
 
 ### Wireframes
 
-- [Desktop/Mobile Wireframes **All Tickets Page**](#)
-- [Desktop/Mobile Wireframes **Full Ticket Page**](#)
-- [Desktop/Mobile Wireframes **All Forms Page**](#)
+- [Desktop/Mobile Wireframes **All Tickets Page**](https://github.com/dan360z/Full-Stack-Project/blob/master/static/wireframes/all-tickets.jpg?raw=true)
+- [Desktop/Mobile Wireframes **Full Ticket Page**](https://github.com/dan360z/Full-Stack-Project/blob/master/static/wireframes/full-ticket.jpg?raw=true)
+- [Desktop/Mobile Wireframes **All Forms Page**](https://github.com/dan360z/Full-Stack-Project/blob/master/static/wireframes/forms.jpg?raw=true)
 
 
 ---
