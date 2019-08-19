@@ -1,6 +1,6 @@
-# Fullstack Milestone Project - Unicorn Atractor Issue Tracker
+# Fullstack Milestone Project - Unicorn Attractor Issue Tracker
 
-Welcome to my fullstack milestone project, for this project I created an issue tracker for an app called Unicorn Attractor.
+Welcome to my fullstack milestone project, for this project I have created an issue tracker for an app called Unicorn Attractor.
 The Issue Tracker allows users to report bugs they have discovered on Unicorn Attractor by creating a bug ticket or if they have an idea for a new feature they can create a feature ticket which requires a donation.
 
 ---
@@ -45,7 +45,7 @@ an idea for a new feature.
 
 - Create 'Feature' ticket - If a user is signed in they can create a 'Feature' ticket, these tickets require a minimum donation of £5. Users will have to complete a form to create a ticket and a payment form which takes their bank card details. If the payment goes through a 'Feature' ticket is created.
 
-- Full ticket page - This page displays full ticket to the user which is the tickets name, total upvotes, ticket status and category. This page also includes edit and delete buttons.
+- Full ticket page - This page displays full ticket to the user which is the tickets name, total upvotes, ticket status and category. This page also includes edit and delete buttons that are only available to the creator of the ticket.
 
 - Upvote - This is a button located on the full ticket page. When a user clicks on the upvote button the total upvotes is incremented by 1.
 
@@ -98,7 +98,7 @@ User scenarios:
 1. Create an account:
     1. Go to the navigation menu and click on register.
     2. Complete the form.
-    3. Click on the register button and verify you have been signed in a message will appear confirming this.
+    3. Click on the register button and verify you have been signed in, a message will appear confirming this.
 
 2. Login:
     1. If you have an existing account go to navigation menu and click on login.
@@ -106,8 +106,8 @@ User scenarios:
     3. Click on the login button and verify you have been signed in a message will appear confirming this.
 
 3. Logout:
-    1. If you are already logged in go to the navigation menu and click on logout.
-    2. Verify you have been logged out message will appear confirming this.
+    1. If you are already logged in, go to the navigation menu and click on logout.
+    2. Verify you have been logged out, a message will appear confirming this.
 
 4. View full ticket:
     1. On the landing page all the tickets will be dispalyed.
@@ -126,7 +126,7 @@ User scenarios:
 
 7. Edit ticket:
     1. On the full ticket page if the ticket is yours you can click on an edit button.
-    2. Complete the prefilled form and click save.
+    2. Make a change to the prefilled form and click save.
     3. Verify that your changes have been made to the ticket.
 
 8. Delete ticket:
@@ -147,7 +147,7 @@ User scenarios:
 - I tested the website on Chrome, Microsoft Edge and Firefox.
 
 #### Validation
-- I have validated the HTML using **[W3C Markup Validation Service](https://validator.w3.org/)**. Unfortunately the W3C HTML Validator shows alot of errors when reading the Jinja templating syntax. But the rest of the HTML is valid.
+- I have validated the HTML using **[W3C Markup Validation Service](https://validator.w3.org/)**. Unfortunately the W3C HTML Validator shows alot of errors when reading the Django templating syntax. But the rest of the HTML is valid.
 - I have validated the CSS using **[W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)**.
 
 ---
@@ -181,8 +181,6 @@ Here are the steps for local deployment:
     - STRIPE_PUBLISHABLE : `Publishable key`.
     - STRIPE_SECRET : `Secret key`.
 
-- Add `'127.0.0.1'` to Allowed Hosts in settings.py.
-
 - Now you can run your application using the following command in your CLI:
     - `./manage.py runserver`
 
@@ -197,6 +195,8 @@ Here are the steps for local deployment:
 
 - To access the Django Admin Panel, you must create a superuser:
     - `manage.py createsuperuser`   
+
+- Add `'127.0.0.1'` to Allowed Hosts in settings.py.
 
 - Now you can run your application again using the following command in your CLI:
     - `./manage.py runserver`
