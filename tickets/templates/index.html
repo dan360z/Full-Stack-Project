@@ -56,6 +56,9 @@
                         <hr class="hr-red">
                         {% endif %}
                         <p class="text-center ticket-details">{{ticket.details |truncatewords:20}}</p>
+                        <div>
+                            <p class="upvote"><i class="far fa-thumbs-up"></i><span> {{ticket.upvotes}}</span></p>
+                        </div>
                         {% if ticket.category.category == "Feature" %}
                         <p class="ticket-category">Type: <span class="feature-text">{{ticket.category}}</span></p>
                         {% else %}

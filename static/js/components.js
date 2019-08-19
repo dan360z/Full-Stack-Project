@@ -13,7 +13,7 @@ $(document).ready(function () {
         $('#dj-message').hide();
     }, 6000);
 
-
+    
 });
 
 

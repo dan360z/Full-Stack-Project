@@ -241,4 +241,4 @@ I have deployed this project to [Heroku](https://www.heroku.com/) using the **ma
 - [Stack OverFlow](https://stackoverflow.com/). Help with various code related problems.
 
 ### Designer/Developer
-Recipe Book was designed and developed by **Daniel Field**.
+Unicorn Attractor Issue Tracker was designed and developed by **Daniel Field**.
