@@ -22,7 +22,9 @@ an idea for a new feature.
 
 ### Wireframes
 
-- [Desktop/Mobile Wireframes **All Recipes Page**](#)
+- [Desktop/Mobile Wireframes **All Tickets Page**](#)
+- [Desktop/Mobile Wireframes **Full Ticket Page**](#)
+- [Desktop/Mobile Wireframes **All Forms Page**](#)
 
 
 ---
