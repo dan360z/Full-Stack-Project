@@ -59,6 +59,7 @@ def create_or_edit_ticket(request, pk=None):
     if request.method == "POST":
         form = TicketForm(request.POST, instance=ticket)
         if form.is_valid():
+            form.instance.email = request.user.email 
             ticket = form.save()
             messages.success(request, "Your ticket has been saved!")
             return redirect(full_ticket, ticket.pk)
